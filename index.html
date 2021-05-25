@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <style>
+      #grid {
+        width: 1500px;
+        height: 1500px;
+        position: absolute;
+      }
+
+      #grid div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid #000;
+        align-items: center;
+        font-size: 13px;
+        padding: 3px;
+        box-sizing: border-box;
+        background: rgba(244, 244, 244, 1);
+      }
+      #grid-row,
+      #grid-col {
+        z-index: 0;
+      }
+
+      #grid-col div {
+        max-width: 1px;
+        min-width: 1px;
+        display: inline-block;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      #grid-row div {
+        max-height: 1px;
+        min-height: 1px;
+        display: inline-block;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="grid"></div>
+    <div id="grid-row"></div>
+    <div id="grid-col"></div>
+    <script src="src/index.ts"></script>
+  </body>
+</html>
